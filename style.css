@@ -5,19 +5,30 @@ html{
 	--colour3: #3aafa9;
 	--colour4: #def2f1;
 	--colour5: #feffff;
-
+	height:100%;
 }
 body{
 	font-family: 'Encode Sans Condensed', sans-serif;
 	margin: 0px;
 	padding: 0px;
-	background-color: var(--colour3);
+	background: linear-gradient(135deg, var(--colour3), var(--colour4));
 	display: inline-block;
+	height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+ .gradient-text{
+	background: linear-gradient(-45deg, turquoise, aquamarine);
+	background-clip: text;
+	color: rgba(0,0,0,0);
+}
+
 .main{
 	margin-top: 40px;
 }
 .heading-container{
+	z-index: 2;
 	width: 100%;
 	color: var(--colour4);
 	min-height: 50px;
@@ -32,21 +43,39 @@ body{
 	text-align: center;
 }
 .container{
-	
+	width: 50%;
+	padding: 10px;
+	border-radius: 15px;
+	margin: 20px;
+	background-color: var(--colour2);
+	display: inline-block;
+}
+
+.container-alt{
+	width: 50%;
+	padding: 10px;
+	border-radius: 15px;
+	margin: 20px;
+	background: linear-gradient(-45deg, turquoise, aquamarine);
+	display: inline-block;
+	margin-left: 47.5%
 }
 
 .buffer{
-	min-height:50px;
-	max-height:100px;
+	height: 150px;
+	clear: all;
 }
 
 .text{
 	color:var(--colour5);
+	float: center;
 }
 
-.main {
-	margin-top: 40px;
+.text-alt{
+	color:var(--colour1);
+	float: center;
 }
+
 @keyframes unhover{
 	from {background-color: var(--colour2);}
 	to {background-color: var(--hover-color);}
@@ -69,6 +98,7 @@ body{
 	animation-name: unhover;
 	animation-duration: 300ms;
 	animation-fill-mode: forwards;
+	display: inline-block;
 }
 
 .dropbutton:hover{
@@ -81,11 +111,30 @@ body{
 .navbar{	
 	background-color:var(--colour2);
 	position:fixed;
-	top: 0;
-	width:110%;
-	height:40px;
-	z-index:2;
+	top: 75px;
+	left: 15%;
+	right: 15%;
+	width:70%;
+	height:auto;
+	z-index:1;
 	clear: none;
 	box-sizing: content-box;
+	border-radius: 0px 0px 15px 15px;
 	color:var(--colour2);
+	padding: 10px;
+	box-shadow: 4px 4px var(--colour1);	
+}
+
+.navClicked{
+	animation-name: FadeOut;
+	animation-duration: 1000ms;
+}
+
+@keyframes FadeOut{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
 }
