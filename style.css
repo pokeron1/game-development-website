@@ -41,6 +41,8 @@ body{
 }
 .header{
 	text-align: center;
+	text-transform: uppercase;
+	font-weight: 800;
 }
 .container{
 	width: 50%;
@@ -49,6 +51,7 @@ body{
 	margin: 20px;
 	background-color: var(--colour2);
 	display: inline-block;
+	border: 4px solid var(--colour1);
 }
 
 .container-alt{
@@ -58,7 +61,8 @@ body{
 	margin: 20px;
 	background: linear-gradient(-45deg, turquoise, aquamarine);
 	display: inline-block;
-	margin-left: 47.5%
+	margin-left: 47.5%;
+	border: 4px solid var(--colour1);
 }
 
 .buffer{
@@ -69,11 +73,13 @@ body{
 .text{
 	color:var(--colour5);
 	float: center;
+	font-size: 17px;
 }
 
 .text-alt{
 	color:var(--colour1);
 	float: center;
+	font-size: 17px;
 }
 
 @keyframes unhover{
