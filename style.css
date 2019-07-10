@@ -169,3 +169,7 @@ a{
 h3{
 	margin: 0px 0px 5px 0px;
 }
+
+video{
+	box-shadow: 0px 0px 15px var(--colour1);
+}
