@@ -37,7 +37,8 @@ body{
 	background: var(--colour2);
 	border-radius: 0px 0px 30px 30px;
 	position: fixed;
-	box-shadow: 4px 4px var(--colour1);	
+	box-shadow: 4px 4px 8px var(--colour1);	
+	border: 2px solid var(--colour1);
 }
 .header{
 	text-align: center;
@@ -52,6 +53,7 @@ body{
 	background-color: var(--colour2);
 	display: inline-block;
 	border: 4px solid var(--colour1);
+	box-shadow: 0px 0px 10px var(--colour2)
 }
 
 .container-alt{
@@ -63,6 +65,7 @@ body{
 	display: inline-block;
 	margin-left: 47.5%;
 	border: 4px solid var(--colour1);
+	box-shadow: 0px 0px 10px var(--colour2)
 }
 
 .buffer{
@@ -83,13 +86,25 @@ body{
 }
 
 @keyframes unhover{
-	from {background-color: var(--colour2);}
-	to {background-color: var(--hover-color);}
+	from {
+		background-color: var(--colour3);
+		box-shadow: 0px 0px 10px var(--colour1);
+	}
+	to {
+		background-color: var(--hover-color);
+		box-shadow: 0px 0px 0px var(--colour1);
+	}
 }
 
 @keyframes hover {
-	from {background-color: var(--hover-color);}
-	to {background-color: var(--colour2);}
+	from {
+		background-color: var(--hover-color);
+		box-shadow: 0px 0px 0px var(--colour1);
+	}
+	to {
+		background-color: var(--colour3);
+		box-shadow: 0px 0px 10px var(--colour1);
+	}
 	
 }
 .dropbutton {
@@ -98,7 +113,7 @@ body{
 	text-align:center;
 	padding: 16px;
 	font-size: 16px;
-	border: none;
+	border: 2px solid var(--colour2);
 	height: 20px;
 	border-radius: 4px;
 	animation-name: unhover;
@@ -126,9 +141,10 @@ body{
 	clear: none;
 	box-sizing: content-box;
 	border-radius: 0px 0px 15px 15px;
+	border: 2px solid var(--colour1);
 	color:var(--colour2);
 	padding: 10px;
-	box-shadow: 4px 4px var(--colour1);	
+	box-shadow: 4px 4px 8px var(--colour1);	
 }
 
 .navClicked{
@@ -143,4 +159,9 @@ body{
 	100%{
 		opacity: 0;
 	}
+}
+
+a{
+	color: aquamarine;
+	text-decoration: none;
 }
