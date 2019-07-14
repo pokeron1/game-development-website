@@ -21,6 +21,7 @@ body{
  .gradient-text{
 	background: linear-gradient(-45deg, turquoise, aquamarine);
 	background-clip: text;
+	-webkit-background-clip: text;
 	color: rgba(0,0,0,0);
 }
 
